@@ -79,6 +79,9 @@ class HtmlInputsView(UnicornView):
         else:
             self.name = "Universe"
 
+    def set_flavor(self, value: str):
+        self.flavor = value
+
     def clear_states(self):
         self.state = ""
 

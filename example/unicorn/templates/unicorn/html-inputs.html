@@ -64,6 +64,20 @@
   </div>
 
   <div>
+    <h2>Select with custom setter</h2>
+    <select unicorn:change="set_flavor($event.target.value)" id="select-custom-setter">
+      <option value="">-- select --</option>
+      {% for flavor in flavors %}
+      <option value="{{ flavor }}">{{ flavor }}</option>
+      {% endfor %}
+    </select>
+
+    <p>
+      Hi {{ flavor }}
+    </p>
+  </div>
+
+  <div>
     <h2>Radio buttons</h2>
     <input type="radio" unicorn:model="pie" name="pie" value="blueberry"> Blueberry</input><br />
     <input type="radio" unicorn:model="pie" name="pie" value="apple"> Apple</input><br />
